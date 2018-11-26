@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="theme/header.css">
+        <link rel="stylesheet" href="theme/content.css">
+        <link rel="stylesheet" href="theme/buttons.css">
+        <script src="app.js"></script>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <header>
+            <div class="navbar">
+            <nav class="cabecera">
+                <div class="menu"><i onclick=""></i></div>
+                <div class="titulo"><h3>A-genda</h3></div>
+                <div class="buscar"><img src="i-conos/baseline-search-24px.svg" class="icono"></div>
+            </nav>
+            </div>
+        </header>
+
+        <div id="agenda">
+            <div>
+                <input type="checkbox" id="a-input" class="a-input">
+                <label for="a-input" class="item-label">
+                  <div class="fecha"><h3>01</h3></div>
+                  <div class="dia">
+                    <p>julio 2018</p><span>Domingo</span>
+                  </div>
+                  <div class="flecha"><i class="arrow down"></i></div>
+                </label>
+                <p class="hid-content">Esto aparece cuando se toca sobre el día.
+                   Si se toca en este evento te lleva a una página donde se ve en grande.
+                   Si se toca la fecha de nuevo se recoge el evento y deja de verse</p>
+            </div>
+        </div>
+        <div class="modal">
+            <div class="formulario">
+                <div class="input-container">
+                    <input type="date" class="enterFecha" >
+                </div>
+                <div class="input-container">
+                    <input type="text" placeholder="texto" class="enterContenido"
+                     onkeypress="return noEnter(event)">
+                </div>
+                <button class="modal-button" onclick="llamar()"><p>Submit</p></button>
+            </div>
+        </div>
+        <div class="fab" onclick="activeFab()"><div class="icono"><i></i></div></div>
+
+        
+        
+    </body>
+</html>
