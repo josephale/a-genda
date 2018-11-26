@@ -1,0 +1,251 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Song Myung', serif;
+}
+.select-box{
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.select-box select{
+  background: #0563af;
+  margin-right: 20px;
+  margin-left: 20px; 
+  color: #fff;
+  padding: 10px;
+  width: 93vw;
+  height: 50px;
+  border: none;
+  font-size: 15px;
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+}
+
+.select-box select option{
+  width: 70vw;
+}
+
+.select-box::before{
+  content: '\f107';
+  transition: all 0.5s;
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  top: 0;
+  right: 20px;
+  width: 10%;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  font-size: 28px;
+  pointer-events: none;
+  background: #007ce0;
+}
+
+.select-box:hover::before{
+  background: #0472ca;
+}
+option{
+  width: inherit;
+  background: #0c548f;
+}
+
+/* =========================================Acordeon========================= */
+
+.acordeon{
+  position: absolute;
+  flex-flow: column;
+  width: 90vw;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%,0);
+  box-sizing: border-box;
+  
+}
+
+.acordeon input{
+  display: none;
+}
+
+.acordeon__titulo {
+  text-align: center;
+  display: flex;
+  padding: 15px;
+  height: 6vh;
+  background: #d50000;
+  color: white;
+  cursor: pointer;
+  margin: 2px 0;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
+.dia{
+  display: flex;
+
+  justify-content: center;
+  align-content: center;
+  width: 8vh;
+  height: 6vh;
+}
+
+.acordeon__titulo h3{
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  width: 30px;
+  align-self: center;
+  font-family: sans-serif;
+}
+.acordeon__titulo .fecha{
+  width: 80vw;
+  display: flex;
+  flex-flow: column;
+  height: 6vh;
+  margin: 2px;
+  padding: 2px;
+  align-self: center;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+.acordeon__titulo .fecha p{
+  height: 50%;
+  font-size: 20px;
+  margin: 0 0 2px 0;
+  line-height: 3vh;
+  text-align: center;
+  align-items: center;
+}
+.acordeon__titulo .fecha span{
+  height: 50%;
+  font-size: 15px;
+  margin-top: 2px;
+  text-align: center;
+  line-height: 3vh;
+  color:rgb(197, 196, 190);
+}
+
+.acordeon__titulo:hover {
+  background: #ff6348;
+  color: black;
+}
+.acordeon__titulo:hover .arrow{
+  border: solid black;
+  border-width: 0 3px 3px 0;
+}
+
+.acordeon__titulo:hover .fecha span{
+  color: rgb(8, 8, 97);
+}
+
+.acordeon__contenido {
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+  transition: all 0.5s;
+}
+
+.acordeon input:checked ~ .acordeon__contenido{
+  height: auto;
+  padding: 10px;
+
+}
+
+.acordeon input:checked ~ .acordeon__titulo .flecha .arrow{
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  transition: all 0.5s;
+  margin-top: 14px;
+  margin-left: 14px;
+}
+
+.flecha
+{
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  padding-bottom: 13px;
+  width: 8vh;
+  height: 6vh;
+}
+
+.acordeon input:checked ~ .acordeon__titulo .flecha{
+  padding: 4px;
+  padding-top: 13px;
+}
+
+.arrow{
+  width: 0;
+  height: 0;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  margin: 8px 5px 5px 8px;
+  transition: all 0.5s;
+  padding: 7px;
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+/*====================================media queries=========================================================*/
+
+@media (min-width: 400px){
+  .arrow{
+    padding: 10px;
+  }
+  .acordeon__titulo .fecha p{
+    font-size: 24px;    
+  }
+
+  .acordeon__titulo .fecha span{
+    font-size: 20px;
+  }
+
+  .dia h3{
+    font-size: 45px;
+  }
+}
+
+@media (min-width: 720px){
+  .arrow{
+    padding: 14px;
+    border-width: 0 5px 5px 0;
+  }
+  .acordeon__titulo:hover .arrow{
+    border-width: 0 5px 5px 0;
+  }
+
+  .flecha{
+    padding-bottom: 2vh;
+  }
+
+  .acordeon input:checked ~ .acordeon__titulo .flecha {
+    padding-top: 2vh;
+  }
+
+  .dia h3{
+    font-size: 60px;
+  }
+}
+
+
+
+
+
+
+
+
+

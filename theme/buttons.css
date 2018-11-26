@@ -1,0 +1,86 @@
+/*==================================floating action button ========================================*/
+
+.fab {
+    width: 70px;
+    height: 70px;
+    z-index: 10;
+    background-color: teal;
+    border: 0px;
+    border-radius: 50%;
+    box-shadow: 0 3px 5px 0 #666;
+    transition: all 0.1s ease-in-out;
+    font-size: 50px;
+    line-height: 70px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    transition: all 0.7s;
+    margin: 15px;
+    right: 0;
+    bottom: 0;
+ }
+ .fab .icono{
+     flex-flow: column;
+     height: 25px;
+     width: 25px;
+ }
+ .fab i{
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    position: absolute;
+    height: 0;
+    width: inherit;
+    border-bottom: .18em solid white;
+    font-size: 20px;
+}
+
+.fab i::after, .fab i::before{
+    content: '';
+    display: block;
+    position: absolute;
+    height: 0;
+    width: inherit;
+    border-bottom: .18em solid white;
+}
+
+.fab i::after{
+    transform: rotate(90deg);
+}
+
+.fab i::before{
+    opacity: 0;
+}
+
+
+ .fab:hover {
+    box-shadow: 0 3px 3px 0 #666;
+    transform: scale(1.05);
+ }
+.fab.activo{
+    background-color: #E91E63;
+    transition: all 0.5s;
+    transform: rotate(225deg);
+    box-shadow: -1.5px -1.5px 3px 0 #666;
+}
+
+/*================================== boton modal ========================================*/
+
+.modal-button{
+    width: 90%;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+    background: #E91E63;
+    color: white;
+    border: none;
+    box-shadow: 0 2px 1px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3);
+    border-radius: 3px;
+}
+
+/*=========================================  ==========================================*/
+
+
+ 

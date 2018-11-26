@@ -1,0 +1,272 @@
+/*============================================== agenda ============================================*/
+
+#agenda{
+    position: absolute;
+    flex-flow: column;
+    width: 90vw;
+    top: 70px;
+    left: 50%;
+    transform: translate(-50%,0);
+    box-sizing: border-box;
+    margin-bottom: 60px;
+}
+
+#agenda .a-input{
+    display: none;
+    outline: none;
+}
+
+/*==================================label ligado al input============================================*/
+.item-label{
+    text-align: center;
+    display: flex;
+    padding: 15px;
+    height: 45px;
+    cursor: pointer;
+    margin: 4px 0 0 0;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #304ffe;
+    color: whitesmoke;
+}
+#agenda .a-input:checked ~ .item-label{
+    background-color: #1ecbff;
+    color: black;
+}
+
+.item-label:hover{
+    background-color: #1ecbff;
+    color: black;
+}
+
+/*=================================fecha(dia) ingresada por el usuario=================================*/
+
+.fecha{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: auto;
+    height: 50px;
+    padding: 2px;
+}
+
+.fecha h3{
+    font-size: 45px;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    align-self: center;
+    font-family: "roboto", sans-serif;
+}
+
+/*==============================Dia de la semana + mes y año ingresados por el usuario==================*/
+
+.dia{
+    width: 80vw;
+    display: flex;
+    flex-flow: column;
+    height: 50px;
+    margin: 2px;
+    padding: 2px;
+    align-self: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.dia p{
+    height: 50%;
+    font-size: 23px;
+    font-weight: 400;
+    margin: 0 0 2px 0;
+    line-height: 23px;
+    margin-bottom: 2px;
+    text-align: center;
+    align-items: center;
+    font-family: "roboto", sans-serif;
+}
+
+.dia span{
+    height: 50%;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 2px;
+    text-align: center;
+    line-height: 23px;
+    color:#d5d5d5;
+    font-family: "roboto", sans-serif;
+}
+
+#agenda .a-input:checked ~ .item-label .dia span{
+    color: #656565;
+}
+
+.item-label:hover .dia span{
+    color: #656565;
+}
+
+/*===================================== contenido oculto del label ===================================*/
+
+.hid-content{
+    height: 0;
+    font-size: 18px;
+    background-color: #222930;
+    color: #E9E9E9;
+    overflow: hidden;
+    margin: 0;
+    transition: all 0.5s;
+}
+
+#agenda .a-input:checked ~ .hid-content{
+    height: auto;
+    overflow-wrap: break-word;
+    font-family: Helvetica;
+    padding: 15px;
+}
+
+/*======================================contenedor flecha y su contenido==================================*/
+
+#agenda .a-input:checked ~ .item-label .flecha .arrow{
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    transition: all 0.3s;
+    margin: 0;
+}
+
+.flecha{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    padding-bottom: 13px;
+    margin: 0 4px;
+    width: 54px;
+    height: auto;
+}
+
+#agenda .a-input:checked ~ .item-label .flecha{
+    padding: 4px;
+    padding-top: 18px;
+}
+
+#agenda .a-input:checked ~ .item-label .arrow{
+    border: solid black;
+    border-width: 0 5px 5px 0;
+}
+
+.item-label:hover .arrow{
+    border: solid black;
+    border-width: 0 5px 5px 0;
+}
+
+.arrow{
+    width: 0;
+    height: 0;
+    border: solid white;
+    border-width: 0 5px 5px 0;
+    transition: all 0.3s;
+    padding: 12px;
+}
+
+.down{
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+/*==========================================media queries=====================================*/
+
+@media (max-width: 356px){
+    .dia p{
+        font-size: 18px;
+        margin: 0;
+    }
+    .dia span{
+        font-size: 15px;
+        margin: 0;
+    }
+}
+  
+@media (min-width: 720px){
+    .fecha{
+        width: 60px;
+    }
+    .fecha h3{
+        font-size: 55px;
+        width: 56px;
+    }
+    
+    /*  fLecha not fecha  */
+
+    .flecha{
+        width: 60px;    
+    }
+}
+
+/*============================================formulario modal======================================*/
+
+
+.formulario{
+    display: none;
+}
+.formulario .input-container input{
+    flex-flow: column;
+    width: 90%;
+}
+
+.modal.activo .formulario{
+    display: flex;
+    position: fixed;
+    z-index: 4;
+    width: 290px;
+    background-color: #283593;
+    padding: 15px;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: column;
+ }
+
+ .input-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  /* Style the form icons */
+  .input-container .icono {
+    padding: 10px;
+    background: #E91E63;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+  }
+  
+  /* Style the input fields */
+  .input-container input {
+    padding: 10px;
+    outline: none;
+  }
+  
+  .input-container input:focus {
+    border: 2px solid #E91E63;
+  }
+
+ /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+}
+
+.modal.activo{
+    display: flex;
+    position: fixed; /* Stay in place */
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Sit on top */
+    box-sizing: border-box;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(26, 25, 25, 0.97); /* Black w/ opacity */
+}

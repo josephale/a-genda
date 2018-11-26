@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Agenda</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="agenda.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/solid.css" integrity="sha384-TbilV5Lbhlwdyc4RuIV/JhD8NR+BfMrvz4BL5QFa2we1hQu6wvREr3v6XSRfCTRp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/fontawesome.css" integrity="sha384-ozJwkrqb90Oa3ZNb+yKFW2lToAWYdTiF1vt8JiH5ptTGHTGcN7qdoR1F95e0kYyG" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Song+Myung" rel="stylesheet">
+  <meta charset="utf-8">
+</head>
+<body>
+  <div>
+  
+    <!-- Stuff that matters --> 
+    <div class="select-box">
+      <select>
+        <option value="0">Seleccionar Categoria:</option>
+        <option value="1">Categoria 1</option>
+        <option value="2">Categoria 1 mejorada</option>
+      </select>      
+    </div>
+    <!-- Stuff that matters end --> 
+    
+  </div>
+
+  <div  class="acordeon">
+
+      <div class="acordeon__item">
+        <input type="checkbox" name="eventos" id="item1">
+        <label for="item1" class="acordeon__titulo">
+          <div class="dia"><h3>01</h3></div>
+          <div class="fecha">
+            <p>julio 2018</p><span>Domingo</span>
+          </div>
+          <div class="flecha">
+            <i class="arrow down"></i>
+          </div>
+        </label>
+          <p class="acordeon__contenido">Esto aparece cuando se toca sobre el día.
+           Si se toca en este evento te lleva a una página donde se ve en grande.
+           Si se toca la fecha de nuevo se recoge el evento y deja de verse</p>
+      </div>
+
+      <div class="acordeon__item">
+          <input type="checkbox" name="eventos" id="item2">
+          <label for="item2" class="acordeon__titulo">
+            <div class="dia"><h3>02</h3></div>
+            <div class="fecha"><p>julio 2018</p><span>Lunes</span></div>
+            <div class="flecha">
+              <i class="arrow down"></i>
+            </div>
+          </label>
+            <p class="acordeon__contenido">Esto aparece cuando se toca sobre el día.
+             Si se toca en este evento te lleva a una página donde se ve en grande.
+             Si se toca la fecha de nuevo se recoge el evento y deja de verse</p>
+      </div>
+      
+      <div class="acordeon__item">
+          <input type="checkbox" name="eventos" id="item3">
+          <label for="item3" class="acordeon__titulo">
+            <div class="dia"><h3>03</h3></div>
+            <div class="fecha"><p>julio 2018</p><span>Martes</span></div>
+            <div class="flecha">
+              <i class="arrow down"></i>
+            </div>
+          </label>
+            <p class="acordeon__contenido">Esto aparece cuando se toca sobre el día.
+             Si se toca en este evento te lleva a una página donde se ve en grande.
+             Si se toca la fecha de nuevo se recoge el evento y deja de verse</p>
+      </div>
+
+      <div class="acordeon__item">
+          <input type="checkbox" name="eventos" id="item4">
+          <label for="item4" class="acordeon__titulo">
+            <div class="dia"><h3>04</h3></div>
+            <div class="fecha"><p>julio 2018</p><span>Miércoles</span></div>
+            <div class="flecha">
+              <i class="arrow down"></i>
+            </div>
+          </label>
+            <p class="acordeon__contenido">Esto aparece cuando se toca sobre el día.
+             Si se toca en este evento te lleva a una página donde se ve en grande.
+             Si se toca la fecha de nuevo se recoge el evento y deja de verse</p>
+      </div>
+  </div>
+  <script src="agenda.js"></script>
+</body>
+
+</html>
